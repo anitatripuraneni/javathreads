@@ -1,0 +1,15 @@
+package com.thread;
+
+public class WaitAndNotifyProcessor {
+	public void produce() throws InterruptedException{
+		synchronized (this) {
+			System.out.println("producer thread running...");
+			wait();
+		}
+		
+	}
+
+	public void consume() throws InterruptedException {
+		Thread.sleep(2000);
+	}
+}

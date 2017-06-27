@@ -1,0 +1,16 @@
+package com.thread;
+
+import java.util.concurrent.Semaphore;
+
+public class SemaphoreDemo {
+
+	public static void main(String[] args) throws InterruptedException {
+		Semaphore sem= new Semaphore(1);
+		sem.acquire();
+		sem.release();
+		System.out.println("Avaliable permits: "+sem.availablePermits());
+		
+
+	}
+
+}

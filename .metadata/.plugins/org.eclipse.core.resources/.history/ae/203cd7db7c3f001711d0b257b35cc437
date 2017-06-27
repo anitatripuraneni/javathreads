@@ -1,0 +1,11 @@
+package com.thread;
+
+public class CountDownLatchProcessor implements Runnable {
+
+	@Override
+	public void run() {
+		// TODO Auto-generated method stub
+
+	}
+
+}

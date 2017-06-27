@@ -1,0 +1,39 @@
+package com.thread;
+
+import java.util.LinkedList;
+
+public class LowLevelSyncronizationProcessor {
+
+	private LinkedList<Integer> list = new LinkedList<>();
+	private final int limit = 10;
+	private Object lock = new Object();
+
+	public void produce() throws InterruptedException {
+
+		int value = 0;
+		while (true) {
+			synchronized (lock) {
+				while (list.size() == limit) {
+					lock.wait();
+				}
+				list.add(value++);
+				
+			}
+
+		}
+
+	}
+
+	public void consume() throws InterruptedException {
+		while (true) {
+			synchronized (lock) {
+
+				System.out.print("List size is: " + list.size());
+				int value = list.removeFirst();
+				System.out.println("; value is: " + value);
+				lock.notify();
+			}
+		}
+
+	}
+}

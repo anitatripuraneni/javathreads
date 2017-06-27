@@ -1,0 +1,12 @@
+package com.thread;
+
+public class Processor extends Thread {
+
+	public void run() {
+		while (true) {
+			System.out.println("hello");
+		}
+
+	}
+
+}

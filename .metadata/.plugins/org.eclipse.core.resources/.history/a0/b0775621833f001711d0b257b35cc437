@@ -1,0 +1,12 @@
+package com.thread;
+
+public class LowLevelSyncronizationProcessor {
+
+	public void produce() throws InterruptedException {
+
+	}
+
+	public void consume() throws InterruptedException {
+
+	}
+}

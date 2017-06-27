@@ -1,0 +1,11 @@
+package com.thread;
+
+public class WaitAndNotifyProcessor {
+	public void produce() throws InterruptedException{
+		
+	}
+
+	public void consume() throws InterruptedException {
+		Thread.sleep(2000);
+	}
+}
